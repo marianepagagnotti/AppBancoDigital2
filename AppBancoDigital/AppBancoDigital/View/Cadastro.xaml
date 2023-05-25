@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BehaviorsPackSample"
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
+             x:Class="AppBancoDigital.View.Cadastro" BackgroundColor="#fbf6f6">
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator x:Name="carregando" IsRunning="False" IsVisible="False" Color="#bb6f2c" VerticalOptions="CenterAndExpand" Margin="0,120,0,600" />
+                <Frame CornerRadius="8"
+                   x:Name="frm_cadastro"
+                   BackgroundColor="Transparent"
+                   
+                   HasShadow="False"
+                   VerticalOptions="CenterAndExpand" Margin="10,24,10,60">
+
+                <StackLayout>
+
+                    <Label Text="CADASTRO DO CORRENTISTA" 
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           WidthRequest="300"
+                           TextColor="#bb6f2c"
+                                                      
+                           HorizontalTextAlignment="Center" Margin="10,50,10,30"  />
+
+                    <Label Text="Nome:" TextColor="#bb6f2c"/>
+                    <Entry x:Name="txt_name"
+                           TextColor="Black"
+                            />
+
+                    <Label Text="CPF:" TextColor="#bb6f2c"/>
+                    <Entry x:Name="txt_cpf"
+                           TextColor="Black">
+                        <Entry.Behaviors>
+                        <behaviorPack:CPFValidationBehavior />
+                        <behaviorPack:MaskedBehavior Mask="XXX.XXX.XXX-XX" />
+                        </Entry.Behaviors> 
+                    </Entry>
+
+                    <Label Text="Data de nascimento:"  
+                                       TextColor="#bb6f2c"
+                                       Margin="0,14,10,0"
+                                       />
+                    <DatePicker x:Name="dtpck_datanasc"
+                                       Format="dd/MM/yyyy" />
+
+
+
+                    <Label Text="Defina sua senha:" TextColor="#bb6f2c"   />
+                    <Entry x:Name="txt_senha"   TextColor="Black"    />
+
+                    <Label Text="Confirme sua senha:" TextColor="#bb6f2c"   />
+                    <Entry x:Name="txt_senhaconfirm"   TextColor="Black"    />
+
+                    <Button Text="Cadastrar" 
+                            TextColor="#bb6f2c"
+                            BackgroundColor="Transparent"
+                            FontAttributes="None"
+                            WidthRequest="300"
+                            Clicked="Button_Clicked" 
+                            BorderColor="White"
+                            CornerRadius="40"
+                            BorderWidth="3" 
+                            Margin="10,30,20,8"/>
+
+                    <Button Text="Voltar" 
+                            TextColor="#bb6f2c"
+                            BackgroundColor="Transparent"
+                            FontAttributes="None"
+                            WidthRequest="300"
+                            Clicked="Button_Clicked_1" 
+                            BorderColor="White"
+                            CornerRadius="40"
+                            BorderWidth="3" 
+                            Margin="10,-10,20,10"/>
+                </StackLayout>
+            </Frame>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

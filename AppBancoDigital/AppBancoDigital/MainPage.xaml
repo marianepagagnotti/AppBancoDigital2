@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BehaviorsPackSample"
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
+             x:Class="AppBancoDigital.MainPage" BackgroundColor="#FFF5F5" >
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Image x:Name="logo" HeightRequest="400" WidthRequest="100" Margin="30,-20,0,0" />
+
+            <Frame CornerRadius="8"
+                   x:Name="frm_cadastro"
+                   BackgroundColor="Transparent"
+                   
+                   HasShadow="False"
+                   VerticalOptions="Center" Margin="0,-80,0,100">
+
+                <StackLayout>
+
+
+
+                    <Label Text="CPF:" TextColor="#bb6f2c" FontSize="15"/>
+                    <Entry x:Name="txt_cpf"
+                           TextColor="Black">
+
+                        <Entry.Behaviors>
+                            <behaviorPack:CPFValidationBehavior />
+                            <behaviorPack:MaskedBehavior Mask="XXX.XXX.XXX-XX" />
+                        </Entry.Behaviors>
+                    
+                    </Entry>
+                            
+
+                    <Label Text="Senha:" TextColor="#bb6f2c" FontSize="15"/>
+                    <Entry x:Name="txt_senha"
+                           TextColor="Black"
+                            />
+
+                    <Button Text="Entrar"  
+                    WidthRequest="300"
+                    HorizontalOptions="Center"
+                    FontSize="17"
+                    FontAttributes="None"
+                    BackgroundColor="Transparent" 
+                    BorderColor="white"
+                    BorderWidth="2"
+                    CornerRadius="40"
+                    TextColor="#bb6f2c"
+                    Clicked="Button_Clicked"    
+                    Margin="0,10,0,10"/>
+
+                    <Label Text="Não possui uma conta?" TextColor="black" FontSize="11" Margin="70,0,0,-8"/>
+                    <Button Text="Cadastre-se" 
+                    BorderColor="Transparent" 
+                    BorderWidth="3" 
+                    WidthRequest="300"
+                    HorizontalOptions="Center"
+                    FontSize="13"
+                    CornerRadius="40"
+                    FontAttributes="None"
+                    BackgroundColor="Transparent" 
+                    TextColor="#bb6f2c"
+                    Clicked="Button_Clicked_1"
+                    Margin="105,-30,0,0"/>
+                
+                </StackLayout>
+            </Frame>
+
+           
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
