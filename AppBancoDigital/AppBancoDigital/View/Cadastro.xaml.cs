@@ -46,7 +46,7 @@ namespace AppBancoDigital.View
                         await DataServiceCorrentista.Cadastrar(new Correntista
                         {
                             nome = txt_name.Text,
-                            data_nasc = dtpck_datanasc.Date,
+                            data_nasc = dtpck_datanasc.Date.ToString("yyyy-MM-dd"),
                             cpf = txt_cpf.Text,
                             senha = txt_senha.Text
                         });

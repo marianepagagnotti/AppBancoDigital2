@@ -23,9 +23,9 @@ namespace AppBancoDigital.Service
         {
             string json = JsonConvert.SerializeObject(correntistaModel);
 
-            string response = await PostDataToService(json, "/correntista/save");
+            string response = await DataService.PostDataToService(json, "/correntista/save");
 
-            var obj = JsonConvert.DeserializeObject(response);
+            var obj = JsonConvert.DeserializeObject<Correntista>(response);
 
             Correntista correntista = obj as Correntista;
 
