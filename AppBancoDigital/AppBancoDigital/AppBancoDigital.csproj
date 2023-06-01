@@ -24,6 +24,10 @@
     <None Remove="NovaPasta1\logobanco.png" />
     <None Remove="NovaPasta1\muitolegal.png" />
     <None Remove="NovaPasta1\muitolegal2.png" />
+    <None Remove="NovaPasta1\olho.png" />
+    <None Remove="NovaPasta1\olho_naovisivel.png" />
+    <None Remove="NovaPasta1\olho_ver.png" />
+    <None Remove="NovaPasta1\olho_visivel.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +38,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="NovaPasta1\muitolegal2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaPasta1\olho_naovisivel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaPasta1\olho_visivel.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -50,6 +60,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\PgInicial.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

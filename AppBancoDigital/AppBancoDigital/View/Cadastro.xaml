@@ -48,10 +48,41 @@
 
 
                     <Label Text="Defina sua senha:" TextColor="#bb6f2c"   />
-                    <Entry x:Name="txt_senha"   TextColor="Black"    />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="txt_senha" IsPassword="True"
+                               TextColor="Black"
+                               WidthRequest="230"
+                               Margin="0,0,10,10">
+                            <Entry.Behaviors>
+                                <behaviorPack:PasswordValidationBehavior />
+                            </Entry.Behaviors>
+                        </Entry>
+
+                        <ImageButton x:Name="btn_senha" 
+                                     BackgroundColor="Transparent" 
+                                     Clicked="btn_senha_Clicked"
+                                     />
+
+                    </StackLayout>
+
 
                     <Label Text="Confirme sua senha:" TextColor="#bb6f2c"   />
-                    <Entry x:Name="txt_senhaconfirm"   TextColor="Black"    />
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="txt_confirme_senha" IsPassword="True"
+                               TextColor="Black"
+                                WidthRequest="230"
+                               Margin="0,0,10,10">
+                            <Entry.Behaviors>
+                                <behaviorPack:PasswordValidationBehavior />
+                                <behaviorPack:CompareValidationBehavior BindingContext="{x:Reference txt_senha}" Text="{Binding Text}"/>
+                            </Entry.Behaviors>
+                        </Entry>
+
+                        <ImageButton x:Name="btn_confirme_senha" 
+                                     BackgroundColor="Transparent" 
+                                     Clicked="btn_confirme_senha_Clicked"/>
+
+                    </StackLayout>
 
                     <Button Text="Cadastrar" 
                             TextColor="#bb6f2c"

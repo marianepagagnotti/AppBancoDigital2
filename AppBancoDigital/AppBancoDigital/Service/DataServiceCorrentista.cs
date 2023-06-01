@@ -19,17 +19,18 @@ namespace AppBancoDigital.Service
             return arr_correntistas;
         }
 
-        public static new async Task<object> Cadastrar(Correntista correntistaModel)
+        public static async Task<object> Cadastrar(Correntista c)
         {
-            string json = JsonConvert.SerializeObject(correntistaModel);
+            var json_a_enviar = JsonConvert.SerializeObject(c);
+            string json = await DataService.PostDataToService(json_a_enviar, "/correntista/save");
 
-            string response = await DataService.PostDataToService(json, "/correntista/save");
+            // Verifica se retorna um json, caso contrário retorna null.
+            if (json == "false")
+                return null;
 
-            var obj = JsonConvert.DeserializeObject<Correntista>(response);
+            Correntista correntista = JsonConvert.DeserializeObject<Correntista>(json);
 
-            Correntista correntista = obj as Correntista;
-
-            return obj as Correntista;
+            return correntista;
         }
 
         public static async Task<Correntista> Login(Correntista c)

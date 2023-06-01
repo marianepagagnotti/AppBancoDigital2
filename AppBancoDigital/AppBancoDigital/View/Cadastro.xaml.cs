@@ -18,6 +18,8 @@ namespace AppBancoDigital.View
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            btn_senha.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_naovisivel.png");
+            btn_confirme_senha.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_visivel.png");
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -25,38 +27,20 @@ namespace AppBancoDigital.View
             try
             {
 
-                carregando.IsRunning = true;
-                carregando.IsVisible = true;
-
-
-                if (txt_name.Text == null | txt_senha.Text == null | txt_cpf.Text == null | txt_senhaconfirm.Text == null)
-                {
-                    await DisplayAlert("Ops!", "Você provavelmente deixou algo em branco.", "OK");
-                }
-                else
-                {
-                    if (txt_senha.Text != txt_senhaconfirm.Text)
-                    {
-
-                        await DisplayAlert("Ops!", "As senhas não batem.", "OK");
-
-                    }
-                    else
-                    {
-                        await DataServiceCorrentista.Cadastrar(new Correntista
+                
+                         await DataServiceCorrentista.Cadastrar(new Correntista
                         {
                             nome = txt_name.Text,
                             data_nasc = dtpck_datanasc.Date.ToString("yyyy-MM-dd"),
-                            cpf = txt_cpf.Text,
+                            cpf = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty),
                             senha = txt_senha.Text
                         });
-
 
                         await DisplayAlert("Sucesso!", "Você foi cadastrado.", "OK");
                         await Navigation.PushAsync(new MainPage());
 
-                    }
-                }
+                    
+               
             }
             catch (Exception ex)
             {
@@ -75,6 +59,34 @@ namespace AppBancoDigital.View
         private void Button_Clicked_1(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MainPage());
+        }
+
+        private void btn_senha_Clicked(object sender, EventArgs e)
+        {
+            if (txt_senha.IsPassword == true)
+            {
+                txt_senha.IsPassword = false;
+                btn_senha.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_naovisivel.png");
+            }
+            else
+            {
+                txt_senha.IsPassword = true;
+                btn_senha.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_visivel.png");
+            }
+        }
+
+        private void btn_confirme_senha_Clicked(object sender, EventArgs e)
+        {
+            if (txt_confirme_senha.IsPassword == true)
+            {
+                txt_confirme_senha.IsPassword = false;
+                btn_confirme_senha.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_naovisivel.png");
+            }
+            else
+            {
+                txt_confirme_senha.IsPassword = true;
+                btn_confirme_senha.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_visivel.png");
+            }
         }
     }
 
