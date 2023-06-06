@@ -27,20 +27,18 @@ namespace AppBancoDigital.View
             try
             {
 
-                
-                         await DataServiceCorrentista.Cadastrar(new Correntista
-                        {
-                            nome = txt_name.Text,
-                            data_nasc = dtpck_datanasc.Date.ToString("yyyy-MM-dd"),
-                            cpf = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty),
-                            senha = txt_senha.Text
-                        });
 
-                        await DisplayAlert("Sucesso!", "Você foi cadastrado.", "OK");
-                        await Navigation.PushAsync(new MainPage());
+                await DataServiceCorrentista.Cadastrar(new Correntista
+                {
+                    nome = txt_name.Text,
+                    data_nasc = dtpck_datanasc.Date,
+                    cpf = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty),
+                    senha = txt_senha.Text
+                });
 
-                    
-               
+                await DisplayAlert("Sucesso!", "Você foi cadastrado.", "OK");
+                await Navigation.PushAsync(new MainPage());
+
             }
             catch (Exception ex)
             {
@@ -54,7 +52,7 @@ namespace AppBancoDigital.View
             }
         }
 
-        
+
 
         private void Button_Clicked_1(object sender, EventArgs e)
         {
@@ -90,5 +88,5 @@ namespace AppBancoDigital.View
         }
     }
 
-      
-    }
+
+}

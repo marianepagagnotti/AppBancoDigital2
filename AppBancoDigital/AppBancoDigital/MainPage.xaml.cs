@@ -20,8 +20,26 @@ namespace AppBancoDigital
             logo.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.muitolegal2.png");
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
+            string cpf = txt_cpf.Text;
+            string senha = txt_senha.Text;
+
+            try
+            {
+                Correntista correntista = await DataServiceCorrentista.Login(new Correntista
+                {
+                    cpf = cpf,
+                    senha = senha
+                });
+
+                await Navigation.PushAsync(new View.Home());
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops", ex.Message, "OK");
+            }
 
         }
 

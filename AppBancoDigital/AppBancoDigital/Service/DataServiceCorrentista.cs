@@ -10,16 +10,16 @@ namespace AppBancoDigital.Service
     public class DataServiceCorrentista : DataService
     {
 
-        public static async Task<List<Correntista>> GetPessoasAsync()
+        /*public static async Task<List<Correntista>> GetPessoasAsync()
         {
             string json = await DataService.GetDataFromService("/correntista");
 
             List<Correntista> arr_correntistas = JsonConvert.DeserializeObject<List<Correntista>>(json);
 
             return arr_correntistas;
-        }
+        }*/
 
-        public static async Task<object> Cadastrar(Correntista c)
+        public static async Task<Correntista> Cadastrar(Correntista c)
         {
             var json_a_enviar = JsonConvert.SerializeObject(c);
             string json = await DataService.PostDataToService(json_a_enviar, "/correntista/save");
