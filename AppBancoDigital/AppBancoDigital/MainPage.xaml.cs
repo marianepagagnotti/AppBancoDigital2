@@ -18,6 +18,7 @@ namespace AppBancoDigital
             NavigationPage.SetHasNavigationBar(this, false);
 
             logo.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.muitolegal2.png");
+            btn_senhalog.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_visivel.png");
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -33,7 +34,7 @@ namespace AppBancoDigital
                     senha = senha
                 });
 
-                await Navigation.PushAsync(new View.Home());
+                await Navigation.PushAsync(new View.PgInicial());
 
             }
             catch (Exception ex)
@@ -54,6 +55,20 @@ namespace AppBancoDigital
             catch (Exception ex)
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
+            }
+        }
+
+        private void btn_senhalog_Clicked(object sender, EventArgs e)
+        {
+            if (txt_senha.IsPassword == true)
+            {
+                txt_senha.IsPassword = false;
+                btn_senhalog.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_naovisivel.png");
+            }
+            else
+            {
+                txt_senha.IsPassword = true;
+                btn_senhalog.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_visivel.png");
             }
         }
     }

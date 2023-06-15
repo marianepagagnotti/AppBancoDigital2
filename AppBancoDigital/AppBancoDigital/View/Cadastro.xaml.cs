@@ -18,7 +18,7 @@ namespace AppBancoDigital.View
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            btn_senha.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_naovisivel.png");
+            btn_senha.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_visivel.png");
             btn_confirme_senha.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_visivel.png");
         }
 

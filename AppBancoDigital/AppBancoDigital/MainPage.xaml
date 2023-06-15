@@ -36,7 +36,16 @@
                     <Label Text="Senha:" TextColor="#bb6f2c" FontSize="15"/>
                     <Entry x:Name="txt_senha"
                            TextColor="Black"
-                            />
+                            >
+                    <Entry.Behaviors>
+                        <behaviorPack:PasswordValidationBehavior />
+                    </Entry.Behaviors>
+                    </Entry>
+
+                    <ImageButton x:Name="btn_senhalog" 
+                                     BackgroundColor="Transparent" 
+                                     Clicked="btn_senhalog_Clicked"
+                                     Margin="290,-45,0,0"/>
 
                     <Button Text="Entrar"  
                     WidthRequest="300"
@@ -49,7 +58,7 @@
                     CornerRadius="40"
                     TextColor="#bb6f2c"
                     Clicked="Button_Clicked"    
-                    Margin="0,10,0,10"/>
+                    Margin="0,40,0,10"/>
 
                     <Label Text="Não possui uma conta?" TextColor="black" FontSize="11" Margin="70,0,0,-8"/>
                     <Button Text="Cadastre-se" 

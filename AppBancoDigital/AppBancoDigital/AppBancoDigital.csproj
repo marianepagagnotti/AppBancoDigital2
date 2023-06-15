@@ -17,6 +17,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="View\Login.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="View\Login.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="NovaPasta1\legaldemais.png" />
     <None Remove="NovaPasta1\logo %282%29.png" />
     <None Remove="NovaPasta1\logo-removebg-preview.png" />
@@ -60,9 +68,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Home.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\PgInicial.xaml">

@@ -15,6 +15,7 @@ namespace AppBancoDigital.View
         public PgInicial()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
