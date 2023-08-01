@@ -5,6 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Bem vindo(a) de volta," FontSize="20" Margin="10,0,0,0"/>
+            <Label x:Name="txt_correntista" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

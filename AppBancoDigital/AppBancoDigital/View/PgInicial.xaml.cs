@@ -16,6 +16,8 @@ namespace AppBancoDigital.View
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+
+            txt_correntista.Text = App.DadosCorrentista.nome;
         }
     }
 }
