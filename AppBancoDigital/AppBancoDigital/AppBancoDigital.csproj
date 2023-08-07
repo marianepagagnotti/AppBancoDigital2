@@ -25,6 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="NovaPasta1\boleto.png" />
+    <None Remove="NovaPasta1\cartao.png" />
     <None Remove="NovaPasta1\legaldemais.png" />
     <None Remove="NovaPasta1\logo %282%29.png" />
     <None Remove="NovaPasta1\logo-removebg-preview.png" />
@@ -36,9 +38,17 @@
     <None Remove="NovaPasta1\olho_naovisivel.png" />
     <None Remove="NovaPasta1\olho_ver.png" />
     <None Remove="NovaPasta1\olho_visivel.png" />
+    <None Remove="NovaPasta1\pix.png" />
+    <None Remove="NovaPasta1\user.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="NovaPasta1\boleto.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaPasta1\cartao.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="NovaPasta1\legaldemais.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -52,6 +62,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="NovaPasta1\olho_visivel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaPasta1\pix.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaPasta1\user.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
