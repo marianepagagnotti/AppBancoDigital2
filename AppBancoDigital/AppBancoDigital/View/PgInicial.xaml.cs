@@ -17,11 +17,18 @@ namespace AppBancoDigital.View
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
 
+            btn_pix.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.pix.png");
+            btn_pagar.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.cartao.png");
+            btn_boleto.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.boleto.png");
+            btn_cobrar.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.user.png");
+            //btn_olho_naovisivel.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_naovisivel.png");
+            //btn_envelope.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.user.png");
+            //btn_dots.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.user.png");
             
-            string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
-            string nome = resultsArray[0];
+            //string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
+            //string nome = resultsArray[0];
 
-            txt_correntista.Text = "Olá, " + nome;
+            //txt_correntista.Text = "Olá, " + nome;
         }
         public static string[] explode(string separator, string source)
         {

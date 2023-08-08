@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppBancoDigital.View.PgInicial" BackgroundColor="#fbf6f6">
+             x:Class="AppBancoDigital.View.PgInicial" BackgroundColor="#FFF5F5">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                
-                <StackLayout BackgroundColor="#ffccff" Padding="20" Spacing="20">
+
+                <StackLayout BackgroundColor="#bb6f2c" Padding="20" Spacing="20">
 
                     <StackLayout Orientation="Horizontal">
-                        <ImageButton Source="user.png" 
-                                 Padding="10" BackgroundColor="#bb6f2c"
+                        <ImageButton x:Name ="btn_user" 
+                                 Padding="10" BackgroundColor="#f0f1f5"
                                  CornerRadius="50" 
                                  HorizontalOptions="StartAndExpand"/>
-                        <ImageButton Source="olho_naovisivel.png"
+                        <ImageButton x:Name="btn_olho_naovisivel"
                                  Padding="10"
-                                 BackgroundColor="#ffccff" 
+                                 BackgroundColor="#f0f1f5" 
                                  CornerRadius="50"
-                                 x:Name="eyebutton"/>
-                        <ImageButton Source="envelope.png"
+                                 />
+                        <ImageButton x:Name="btn_envelope"
                                  Padding="10"
-                                 BackgroundColor="#ffccff"
+                                 BackgroundColor="#f0f1f5"
                                  CornerRadius="50"/>
-                        <ImageButton Source="dots.png"
+                        <ImageButton x:Name="btn_dots"
                                  Padding="10"
-                                 BackgroundColor="#ffccff"
+                                 BackgroundColor="#f0f1f5"
                                  CornerRadius="50"/>
                     </StackLayout>
 
@@ -56,7 +56,7 @@
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Padding="10">
 
                         <StackLayout>
-                            <ImageButton Source="pix.png"
+                            <ImageButton x:Name ="btn_pix"
                                       Clicked="ImageButton_Clicked"
                                      BackgroundColor="#f0f1f5"
                                      Padding="15"
@@ -72,7 +72,7 @@
                         </StackLayout>
 
                         <StackLayout>
-                            <ImageButton Source="pagar.png"
+                            <ImageButton x:Name ="btn_pagar"
                                      BackgroundColor="#f0f1f5"
                                      Padding="10"
                                      CornerRadius="50"
@@ -88,7 +88,7 @@
 
 
                         <StackLayout>
-                            <ImageButton Source="boleto.png"
+                            <ImageButton x:Name ="btn_boleto"
                                      BackgroundColor="#f0f1f5" 
                                      Padding="15"
                                      CornerRadius="50"
@@ -104,7 +104,7 @@
 
 
                         <StackLayout>
-                            <ImageButton Source="cobrar.png"
+                            <ImageButton x:Name="btn_cobrar"
                                      BackgroundColor="#f0f1f5" 
                                      Padding="15" 
                                      CornerRadius="50"
