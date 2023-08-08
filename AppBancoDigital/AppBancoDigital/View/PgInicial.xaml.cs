@@ -17,7 +17,20 @@ namespace AppBancoDigital.View
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
 
-            txt_correntista.Text = App.DadosCorrentista.nome;
+            
+            string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
+            string nome = resultsArray[0];
+
+            txt_correntista.Text = "Olá, " + nome;
+        }
+        public static string[] explode(string separator, string source)
+        {
+            return source.Split(new string[] { separator }, StringSplitOptions.None);
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

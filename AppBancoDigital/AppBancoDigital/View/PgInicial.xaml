@@ -29,8 +29,11 @@
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal" Padding="20">
-                        <Label Text="Olá," TextColor="black" FontSize="20" FontAttributes="Bold"/>
-                        <Label x:Name="LblUser" FontSize="20" Text="{Binding nome}" TextColor="black" FontAttributes="Bold"/>
+                        <Label x:Name="txt_correntista"
+                   FontAttributes="Bold"
+                   FontFamily="Century Gothic"
+                   Margin="30,10,20,0"
+                   TextColor="Black"/>
                     </StackLayout>
 
                 </StackLayout>
@@ -54,7 +57,7 @@
 
                         <StackLayout>
                             <ImageButton Source="pix.png"
-                                     Clicked="imgpix"
+                                      Clicked="ImageButton_Clicked"
                                      BackgroundColor="#f0f1f5"
                                      Padding="15"
                                      CornerRadius="50"
