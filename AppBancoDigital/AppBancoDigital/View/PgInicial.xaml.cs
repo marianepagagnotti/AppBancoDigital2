@@ -24,12 +24,16 @@ namespace AppBancoDigital.View
             //btn_olho_naovisivel.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_naovisivel.png");
             //btn_envelope.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.user.png");
             //btn_dots.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.user.png");
-            
-            //string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
-            //string nome = resultsArray[0];
 
-            //txt_correntista.Text = "Olá, " + nome;
+            //string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
+            //string Nome = resultsArray[0];
+
+            //string Saldo = App.DadosConta.saldo.ToString();
+
+            //txt_correntista.Text = Nome;
+            //LblSaldo.Text = "R$ " + Saldo;
         }
+
         public static string[] explode(string separator, string source)
         {
             return source.Split(new string[] { separator }, StringSplitOptions.None);

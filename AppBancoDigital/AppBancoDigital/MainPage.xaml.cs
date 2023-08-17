@@ -23,15 +23,12 @@ namespace AppBancoDigital
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            string cpf = txt_cpf.Text;
-            string senha = txt_senha.Text;
-
             try
             {
                 Correntista correntista = await DataServiceCorrentista.Login(new Correntista
                 {
-                    cpf = cpf,
-                    senha = senha
+                    cpf = txt_cpf.Text.Replace(".", "").Replace("-", ""),
+                    senha = txt_senha.Text
                 });
 
                 await Navigation.PushAsync(new View.PgInicial());
