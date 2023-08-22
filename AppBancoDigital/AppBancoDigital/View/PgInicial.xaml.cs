@@ -12,6 +12,9 @@ namespace AppBancoDigital.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PgInicial : ContentPage
     {
+        double saldo;
+        double fatura;
+        double limite = 2000;
         public PgInicial()
         {
             InitializeComponent();
@@ -20,18 +23,22 @@ namespace AppBancoDigital.View
             btn_pix.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.pix.png");
             btn_pagar.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.cartao.png");
             btn_boleto.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.boleto.png");
-            btn_cobrar.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.user.png");
-            //btn_olho_naovisivel.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_naovisivel.png");
-            //btn_envelope.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.user.png");
-            //btn_dots.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.user.png");
+            btn_lucro.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.lucro.png");
+            btn_login.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.user.png");
+            btn_opcoes.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.tres_pontos.png");
+            btn_olho.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_naovisivel.png");
+            
+            saldo = 132.45;
+            fatura = 70.89;
+            limite -= fatura;
+            LblSaldo.Text = saldo.ToString("C");
+            LblFatura.Text = fatura.ToString("C");
+            LblLimite.Text = limite.ToString("C");
 
-            //string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
-            //string Nome = resultsArray[0];
+            
+            //txt_correntista.Text = App.DadosCorrentista.nome;
 
-            //string Saldo = App.DadosConta.saldo.ToString();
 
-            //txt_correntista.Text = Nome;
-            //LblSaldo.Text = "R$ " + Saldo;
         }
 
         public static string[] explode(string separator, string source)
@@ -40,6 +47,16 @@ namespace AppBancoDigital.View
         }
 
         private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void olho_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void opcoes_Clicked(object sender, EventArgs e)
         {
 
         }
