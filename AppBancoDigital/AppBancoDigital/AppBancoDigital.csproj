@@ -17,16 +17,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="View\Home.xaml.cs" />
     <Compile Remove="View\Login.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="View\Home.xaml" />
     <EmbeddedResource Remove="View\Login.xaml" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="NovaPasta1\boleto.png" />
     <None Remove="NovaPasta1\cartao.png" />
+    <None Remove="NovaPasta1\interrogacao.png" />
     <None Remove="NovaPasta1\legaldemais.png" />
     <None Remove="NovaPasta1\logo %282%29.png" />
     <None Remove="NovaPasta1\logo-removebg-preview.png" />
@@ -40,6 +43,7 @@
     <None Remove="NovaPasta1\olho_ver.png" />
     <None Remove="NovaPasta1\olho_visivel.png" />
     <None Remove="NovaPasta1\pix.png" />
+    <None Remove="NovaPasta1\seta.png" />
     <None Remove="NovaPasta1\tres_pontos.png" />
     <None Remove="NovaPasta1\user.png" />
   </ItemGroup>
@@ -49,6 +53,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="NovaPasta1\cartao.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaPasta1\interrogacao.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="NovaPasta1\legaldemais.png">
@@ -72,6 +79,9 @@
     <EmbeddedResource Include="NovaPasta1\pix.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="NovaPasta1\seta.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="NovaPasta1\tres_pontos.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -91,10 +101,10 @@
     <EmbeddedResource Update="View\Cadastro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Home.xaml">
+    <EmbeddedResource Update="View\PgInicial.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\PgInicial.xaml">
+    <EmbeddedResource Update="View\PixHome.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

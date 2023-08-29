@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.PixHome"
+             BackgroundColor="#FFF5F5">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*,*" >
+                    <ImageButton x:Name="btn_voltar" 
+                             Clicked="btn_voltar_Clicked"
+                             BackgroundColor="Transparent"
+                             Scale="0.9"
+                             Margin="-10,20,0,20"
+                             Grid.Column="0"
+                             Grid.Row="0"/>
+
+                    <Label Text="Pix" Margin="108,22,0,20" 
+                                   FontAttributes="Bold"
+                                   FontSize="15"
+                                   TextColor="Black"
+                                   Grid.Column="1"
+                                   Grid.Row="0"
+                                   Grid.ColumnSpan="3"/>
+
+                    <ImageButton x:Name="btn_interrogacao"
+                                         Clicked="btn_interrogacao_Clicked"
+                                         BackgroundColor="Transparent"
+                                         Scale="0.7"
+                                         Margin="9,15,-10,20"
+                                         Grid.Column="4"
+                                         Grid.Row="0"/>
+                </Grid>
+            </StackLayout>
+
+            <ScrollView>
+
+
+                <StackLayout>
+                    <Button x:Name="btn_pagar_pix"
+                            Text="Pagar"
+                            Clicked="btn_pagar_pix_Clicked"
+                            Margin="25,15,25,0"
+                            BackgroundColor="#bb6f2c"
+                            BorderColor="LightGray"
+                            BorderWidth="1"
+                            CornerRadius="8"
+                            TextTransform="None"
+                            HeightRequest="60"
+                           />
+
+                    <Button x:Name="btn_receber_pix"
+                            Text="Receber"
+                            Clicked="btn_receber_pix_Clicked"
+                            Margin="25,10,25,20"
+                            BackgroundColor="#bb6f2c"
+                            BorderColor="LightGray"
+                            BorderWidth="1"
+                            CornerRadius="8"
+                            TextTransform="None"
+                            HeightRequest="60"
+                           />
+
+                    
+
+                    <Grid RowDefinitions="*,*" ColumnDefinitions="*,*,*,*,*">
+
+
+                    </Grid>
+
+                </StackLayout>
+            </ScrollView>
+
+       
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

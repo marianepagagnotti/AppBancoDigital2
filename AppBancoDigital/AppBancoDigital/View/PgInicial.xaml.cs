@@ -35,8 +35,11 @@ namespace AppBancoDigital.View
             LblFatura.Text = fatura.ToString("C");
             LblLimite.Text = limite.ToString("C");
 
-            
-            //txt_correntista.Text = App.DadosCorrentista.nome;
+
+           // string[] resultsArray = explode(" ", App.DadosCorrentista.nome);
+            //string nome = resultsArray[0];
+
+            //txt_correntista.Text = "Olá, " + nome;
 
 
         }
@@ -46,9 +49,9 @@ namespace AppBancoDigital.View
             return source.Split(new string[] { separator }, StringSplitOptions.None);
         }
 
-        private void ImageButton_Clicked(object sender, EventArgs e)
+        private void pix_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new View.PixHome());
         }
 
         private void olho_Clicked(object sender, EventArgs e)

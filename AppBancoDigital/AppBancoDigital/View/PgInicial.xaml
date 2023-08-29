@@ -38,24 +38,24 @@
 
 
                     </StackLayout>
-                   
 
-                    <StackLayout Orientation="Horizontal" Padding="20">
-                        <Label x:Name="txt_correntista"
-                   FontAttributes="Bold"
-                   FontFamily="Century Gothic"
-                   Margin="30,10,20,0"
-                   TextColor="Black"/>
-                    </StackLayout>
+
+                    <Label x:Name="txt_correntista"
+                       Text="Olá,"
+                        FontSize="23"   
+                        FontAttributes="Bold"
+                        FontFamily="Century Gothic"
+                        Margin="5,25,20,0"
+                        TextColor="Black"/>
 
                 </StackLayout>
 
                 <StackLayout>
 
                     <StackLayout Padding="20">
-                        <Label Text="Conta"
+                        <Label Text="Saldo"
                            TextColor="Black" 
-                           FontSize="20"/>
+                           FontSize="16"/>
                         <Label x:Name="LblSaldo"
                            FontSize="21" 
                            TextColor="Black" 
@@ -69,7 +69,7 @@
 
                         <StackLayout>
                             <ImageButton x:Name ="btn_pix"
-                                      Clicked="ImageButton_Clicked"
+                                      Clicked="pix_Clicked"
                                      BackgroundColor="#f0f1f5"
                                      Padding="15"
                                      CornerRadius="50"
