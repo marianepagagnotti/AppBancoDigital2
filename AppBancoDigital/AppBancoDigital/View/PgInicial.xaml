@@ -6,7 +6,13 @@
         <ScrollView>
             <StackLayout>
 
-                <StackLayout BackgroundColor="#bb6f2c" Padding="20" Spacing="20">
+                <StackLayout Padding="20" Spacing="25">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                            <GradientStop Color="#bb6f2c" Offset="0.3"/>
+                            <GradientStop Color="#775232" Offset="1.1"/>
+                        </LinearGradientBrush>
+                    </Frame.Background>
 
                     <StackLayout Orientation="Horizontal">
                         <ImageButton x:Name="btn_login" Padding="13" 
@@ -20,7 +26,7 @@
                         <ImageButton x:Name="btn_olho" 
                                     Clicked="olho_Clicked" 
                                      Padding="13" 
-                                     BackgroundColor="#bb6f2c" 
+                                     BackgroundColor="Transparent" 
                                      CornerRadius="40"
                                      HeightRequest="2"
                                      WidthRequest="48" Margin="10,-20,-10,8"/>
@@ -28,7 +34,7 @@
                         <ImageButton x:Name="btn_opcoes" 
                                      Clicked="opcoes_Clicked" 
                                      Padding="13" 
-                                     BackgroundColor="#bb6f2c" 
+                                     BackgroundColor="Transparent" 
                                      HeightRequest="50"
                                      CornerRadius="40" 
                                     WidthRequest="50" Margin="10,-20,5,8"/>
@@ -85,6 +91,7 @@
 
                         <StackLayout>
                             <ImageButton x:Name ="btn_pagar"
+                                     Clicked="btn_pagar_Clicked"
                                      BackgroundColor="#f0f1f5"
                                      Padding="10"
                                      CornerRadius="50"

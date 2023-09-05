@@ -17,7 +17,7 @@ namespace AppBancoDigital
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
 
-            logo.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.muitolegal2.png");
+            logo.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.logo4.png");
             btn_senhalog.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.olho_visivel.png");
         }
 

@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.App">
     <Application.Resources>
-
+        
+        <Style x:Key="FonteCartao" TargetType="Label">
+            <Setter Property="FontFamily" Value="{OnPlatform Android='BebasNeue-Regular.ttf#BebasNeue-Regular'}"/>
+            
+        </Style>
+    
     </Application.Resources>
 </Application>
