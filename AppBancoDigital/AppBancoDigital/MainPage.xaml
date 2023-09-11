@@ -3,14 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BehaviorsPackSample"
              xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
-             x:Class="AppBancoDigital.MainPage"  >
+             x:Class="AppBancoDigital.MainPage" BackgroundColor="#FFF5F5" >
 
-    <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-            <GradientStop Color="#bb6f2c" Offset="0.3"/>
-            <GradientStop Color="#775232" Offset="1.1"/>
-        </LinearGradientBrush>
-    </ContentPage.Background>
+    
     <ContentPage.Content>
         <StackLayout>
 
@@ -28,7 +23,7 @@
 
 
 
-                    <Label Text="CPF:" TextColor="black" FontSize="15"/>
+                    <Label Text="CPF:" TextColor="#bb6f2c" FontSize="15"/>
                     <Entry x:Name="txt_cpf"
                            TextColor="Black">
 
@@ -38,9 +33,9 @@
                         </Entry.Behaviors>
                     
                     </Entry>
-                            
 
-                    <Label Text="Senha:" TextColor="black" FontSize="15"/>
+
+                    <Label Text="Senha:" TextColor="#bb6f2c" FontSize="15"/>
                     <Entry x:Name="txt_senha"
                            TextColor="Black"
                             >
@@ -67,7 +62,7 @@
                     Clicked="Button_Clicked"    
                     Margin="0,40,0,10"/>
 
-                    <Label Text="Não possui uma conta?" TextColor="white" FontSize="11" Margin="70,0,0,-8"/>
+                    <Label Text="Não possui uma conta?" TextColor="#bb6f2c" FontSize="11" Margin="70,0,0,-8"/>
                     <Button Text="Cadastre-se" 
                     BorderColor="Transparent" 
                     BorderWidth="3" 

@@ -31,9 +31,10 @@
                                          Grid.Row="0"/>
                 </Grid>
             </StackLayout>
-            
-            <ScrollView>
-                <StackLayout Orientation="Horizontal"
+            <Grid>
+                <ScrollView>
+               
+                    <StackLayout Orientation="Horizontal"
                              Padding="25"
                              HeightRequest="200"
                              Margin="0,-20,0,0"
@@ -88,6 +89,73 @@
                     </Frame>
                 </StackLayout>
             </ScrollView>
+            <ScrollView>
+                     
+                
+                    
+                <StackLayout Orientation="Horizontal"
+                             Padding="25"
+                             HeightRequest="200"
+                             Margin="180,-20,0,0"
+                             
+                             >
+                        
+                        <Frame x:Name="cartao_digital"  
+                           Margin="8,0,8,0"
+                           HasShadow="True"
+                           CornerRadius="15"
+                           WidthRequest="110">
+
+                        <Frame.Background>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                                <GradientStop Color="#bb6f2c" Offset="0.3"/>
+                                <GradientStop Color="#775232" Offset="1.1"/>
+                            </LinearGradientBrush>
+                        </Frame.Background>
+
+
+
+                        <StackLayout Padding="0">
+                            <ImageButton x:Name="btn_dados_cartaodigital" 
+                                         Clicked="btn_dados_cartaodigital_Clicked"
+                                         HorizontalOptions="End"
+                                         WidthRequest="25"
+                                         BackgroundColor="Transparent"/>
+
+                            <Label x:Name="nome_digital" 
+                                   Text="NOME DO TITULAR"
+                                   TextColor="black"
+                                   Style="{StaticResource FonteCartao}"
+                                   FontSize="19"
+                                   Margin="-8,90,0,20"/>
+
+                            <StackLayout Orientation="Vertical"
+                                        Margin="-8,-20,-10,0"
+                                         >
+
+                                <Label x:Name="numero_digital"
+                                       Text="4344"
+                                       Margin="0,0,0,-18"
+                                       />
+                                    
+                                <Label x:Name="denominacao_digital"
+                                       Text="digital"
+                                       FontAttributes="Bold"
+                                       Margin="0,20,0,-18"
+                                       />
+
+                                    <Image x:Name="simbolo_cartao_digital"
+                                       Margin="95,-6,0,0"
+                                       Scale="1.5"/>
+
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+                    
                 </StackLayout>
+            </ScrollView>
+                </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
