@@ -7,12 +7,13 @@
             <StackLayout>
 
                 <StackLayout Padding="20" Spacing="25">
-                    <Frame.Background>
+                    
+                    <StackLayout.Background>
                         <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
                             <GradientStop Color="#bb6f2c" Offset="0.3"/>
                             <GradientStop Color="#775232" Offset="1.1"/>
                         </LinearGradientBrush>
-                    </Frame.Background>
+                    </StackLayout.Background>
 
                     <StackLayout Orientation="Horizontal">
                         <ImageButton x:Name="btn_login" Padding="13" 

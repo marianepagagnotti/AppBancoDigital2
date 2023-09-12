@@ -32,7 +32,7 @@ namespace AppBancoDigital.View
 
         private void btn_receber_pix_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new View.Pix.MostrarQrCode());
         }
 
         private void btn_voltar_Clicked(object sender, EventArgs e)
