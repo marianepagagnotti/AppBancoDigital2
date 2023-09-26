@@ -29,6 +29,9 @@
   <ItemGroup>
     <None Remove="NovaPasta1\boleto.png" />
     <None Remove="NovaPasta1\cartao.png" />
+    <None Remove="NovaPasta1\chave.png" />
+    <None Remove="NovaPasta1\copiaecola.png" />
+    <None Remove="NovaPasta1\iconeQR.png" />
     <None Remove="NovaPasta1\interrogacao.png" />
     <None Remove="NovaPasta1\legaldemais.png" />
     <None Remove="NovaPasta1\logo %282%29.png" />
@@ -56,6 +59,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="NovaPasta1\cartao.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaPasta1\chave.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaPasta1\copiaecola.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovaPasta1\iconeQR.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="NovaPasta1\interrogacao.png">
@@ -113,6 +125,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\Pix\PagarComChave.xaml.cs">
+      <DependentUpon>PagarComChave.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="View\Cadastro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -120,6 +138,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\PgInicial.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Pix\PagarComChave.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Pix\PagarComPix.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Pix\PixHome.xaml">

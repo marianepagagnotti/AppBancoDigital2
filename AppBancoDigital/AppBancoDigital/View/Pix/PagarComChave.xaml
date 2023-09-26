@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.Pix.PagarComChave" BackgroundColor="#FFF5F5">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout>
+                <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*,*" >
+                    <ImageButton x:Name="btn_voltar" 
+                    Clicked="btn_voltar_Clicked"
+                    BackgroundColor="Transparent"
+                    Scale="0.9"
+                    Margin="-10,20,0,20"
+                    Grid.Column="0"
+                    Grid.Row="0"/>
+
+                    <Label Text="Pagar com chave" Margin="56,22,0,20" 
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    TextColor="Black"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="3"/>
+
+                    <ImageButton x:Name="btn_interrogacao"
+                     Clicked="btn_interrogacao_Clicked"
+                     BackgroundColor="Transparent"
+                     Scale="0.7"
+                     Margin="9,15,-10,20"
+                     Grid.Column="4"
+                     Grid.Row="0"/>
+                </Grid>
+
+
+
+
+                <StackLayout Margin="20,0">
+
+                    <Label Text="Primeiro selecione o tipo da chave:" LineHeight="1.2" FontSize="17"  Margin="0,130,0,50" TextColor="#775232"/>
+
+                    <Picker x:Name="pck_conta" BackgroundColor="#efe5d8" Title="Selecione..."  Margin="0,-40,0,0">
+                        <Picker.Items>
+                            <x:String>Telefone</x:String>
+                            <x:String>CPF</x:String>
+                            <x:String>Email</x:String>
+                            <x:String>Aleatória</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="Insira a chave:" FontSize="17"  Margin="0,30,0,0" TextColor="#775232"/>
+                    <Entry FontSize="18"  BackgroundColor="#efe5d8"/>
+
+                    <Button Text="Continuar"  CornerRadius="15" TextColor="black"  Margin="0,50,0,0">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="1,0">
+                                <GradientStop Color="#bb6f2c" Offset="0.3"/>
+                                <GradientStop Color="#775232" Offset="1.1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

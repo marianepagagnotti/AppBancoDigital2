@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppBancoDigital.View
+namespace AppBancoDigital.View.Pix
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PixHome : ContentPage
+    public partial class PagarComChave : ContentPage
     {
-        public PixHome()
+        public PagarComChave()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            btn_voltar.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.seta.png");
+           btn_voltar.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.seta.png");
             btn_interrogacao.Source = ImageSource.FromResource("AppBancoDigital.NovaPasta1.interrogacao.png");
         }
 
@@ -25,19 +25,9 @@ namespace AppBancoDigital.View
 
         }
 
-        private void btn_pagar_pix_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new View.Pix.PagarComPix());
-        }
-
-        private void btn_receber_pix_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new View.Pix.MostrarQrCode());
-        }
-
         private void btn_voltar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new View.PgInicial());
+            Navigation.PushAsync(new View.PixHome());
         }
     }
 }
