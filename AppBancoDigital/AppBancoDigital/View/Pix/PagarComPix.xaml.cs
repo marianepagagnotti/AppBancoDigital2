@@ -25,12 +25,12 @@ namespace AppBancoDigital.View.Pix
 
         private void btn_pagar_qr_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new View.Pix.LerQrCode());
         }
 
         private void btn_pagar_chave_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new View.Pix.PagarComChave());
         }
 
         private void btn_pagar_copiaecola_Clicked(object sender, EventArgs e)

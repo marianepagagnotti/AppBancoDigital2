@@ -36,7 +36,7 @@ namespace AppBancoDigital.View.Pix
 
         private void btn_voltar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new View.PgInicial());
+            Navigation.PushAsync(new View.PixHome());
         }
 
         private void btn_interrogacao_Clicked(object sender, EventArgs e)
