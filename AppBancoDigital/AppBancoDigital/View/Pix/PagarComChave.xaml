@@ -39,7 +39,7 @@
 
                     <Label Text="Primeiro selecione o tipo da chave:" LineHeight="1.2" FontSize="17"  Margin="0,130,0,50" TextColor="#775232"/>
 
-                    <Picker x:Name="pck_conta" BackgroundColor="#efe5d8" Title="Selecione..."  Margin="0,-40,0,0">
+                    <Picker x:Name="pck_chave" BackgroundColor="#efe5d8" Title="Selecione..."  Margin="0,-40,0,0">
                         <Picker.Items>
                             <x:String>Telefone</x:String>
                             <x:String>CPF</x:String>
@@ -49,9 +49,9 @@
                     </Picker>
 
                     <Label Text="Insira a chave:" FontSize="17"  Margin="0,30,0,0" TextColor="#775232"/>
-                    <Entry FontSize="18"  BackgroundColor="#efe5d8"/>
+                    <Entry FontSize="18"  BackgroundColor="#efe5d8" x:Name="txt_chave"/>
 
-                    <Button Text="Continuar"  CornerRadius="15" TextColor="black"  Margin="0,50,0,0">
+                    <Button Text="Continuar" Clicked="Button_Clicked" CornerRadius="15" TextColor="black"  Margin="0,50,0,0">
                         <Button.Background>
                             <LinearGradientBrush EndPoint="1,0">
                                 <GradientStop Color="#bb6f2c" Offset="0.3"/>
