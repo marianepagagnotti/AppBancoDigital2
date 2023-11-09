@@ -44,7 +44,7 @@ namespace AppBancoDigital.Service
             return json_response;
         }
 
-        protected static async Task<string> PostDataToService(string json_object, string rota)
+        public static async Task<string> PostDataToService(string json_object, string rota)
         {
             string json_response;
 

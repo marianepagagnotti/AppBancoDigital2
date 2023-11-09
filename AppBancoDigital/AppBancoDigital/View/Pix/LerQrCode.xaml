@@ -1,12 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              x:Class="AppBancoDigital.View.Pix.LerQrCode">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+                <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*,*" >
+                    <ImageButton x:Name="btn_voltar" 
+           Clicked="btn_voltar_Clicked"
+           BackgroundColor="Transparent"
+           Scale="0.9"
+           Margin="-10,20,0,20"
+           Grid.Column="0"
+           Grid.Row="0"/>
+
+                    <Label Text="Pix" Margin="108,22,0,20" 
+                 FontAttributes="Bold"
+                 FontSize="15"
+                 TextColor="Black"
+                 Grid.Column="1"
+                 Grid.Row="0"
+                 Grid.ColumnSpan="3"/>
+
+                    <ImageButton x:Name="btn_interrogacao"
+                       Clicked="btn_interrogacao_Clicked"
+                       BackgroundColor="Transparent"
+                       Scale="0.7"
+                       Margin="9,15,-10,20"
+                       Grid.Column="4"
+                       Grid.Row="0"/>
+                </Grid>
+
+
+
+                    <Frame VerticalOptions="CenterAndExpand" HeightRequest="600" CornerRadius="10" Margin="10" BackgroundColor="Aquamarine">
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                        <GradientStop Color="#bb6f2c" Offset="0.3"/>
+                        <GradientStop Color="#775232" Offset="1.1"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+
+                <Grid VerticalOptions="CenterAndExpand" Margin="0,17,0,-80">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <zxing:ZXingScannerView x:Name="zxing"
+                                         VerticalOptions="FillAndExpand"/>
+                    <zxing:ZXingDefaultOverlay TopText="Aponte sua camera para o QR CODE"/>
+                </Grid>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
